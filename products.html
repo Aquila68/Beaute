@@ -6,14 +6,17 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+         rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
      <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <script type="text/javascript" src="products.js"></script>
 
 <!-- Navbar start -->
-    <nav class="navbar navbar-default">
       <div class="container-fluid">
+        <nav class="navbar navbar-default">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">Beaute</a>
         </div>
@@ -47,12 +50,33 @@
 
     </nav>
 <!-- Navbar end -->
-    <button onclick="showContent()">Show hidden content</button>
+    <!-- <button onclick="showContent()">Show hidden content</button> -->
     <div class="container">
       <div class="row" >
         <template>
-          <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xxl-4">
-            <h1 class="divp" onmouseover="getProducts();">Hello1</h1>
+          <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3" style="background-color:'green';">
+            <!-- <h1 class="divp" onmouseover="getProducts();">Hello1</h1> -->
+            <div class="product-grid text-center">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/shampoo.jpg" style="width:112px">
+                    </a>
+                </div>
+                <div class="product-content" >
+                  <h3 class="title"><a href="#">Beard Shampoo</a></h3>
+                  <div>
+                      <div style="float:left;margin-left:30px;"><a href="" data-tip="Quick View"><span class="glyphicon glyphicon-search" ></span></a></div>
+                      <div style="float:right;margin-right:30px;"><a href="" data-tip="Add to Cart"><span class="glyphicon glyphicon-heart-empty"></span></a></div>
+                  </div>
+
+                    <span class="product-new-label" >Sale</span>
+                    <span class="product-discount-label" style="clear:both;">20%</span>
+                    <div class="price">$16.00
+                        <span class="old-price">$20.00</span>
+                    </div>
+                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                </div>
+            </div>
           </div>
         </template>
       </div>

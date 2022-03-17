@@ -16,7 +16,7 @@ function showContent() {
 
 //run cell duplication certain amount of times
 function driverProduct(){
-  for(var i = 0; i < 4; i++ ){
+  for(var i = 0; i < 6; i++ ){
       showContent();
   }
 }

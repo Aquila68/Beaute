@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Application Form</title>
+</head>
+<body>
+<form name="contactForm" onsubmit="return validateForm()" >
+    <h2>Application Form</h2>
+    <table >
+        <tr>
+        <td><label>Full Name</label></td>
+        <td><input type="text" name="name"></td>
+        <td><div style="color:red" id="nameErr"></div></td>
+        </tr>
+
+        <tr>
+            <td><label>Email Address</label></td>
+            <td><input type="text" name="email"></td>
+            <td><div style="color:red" id="emailErr"></div></td>
+        </tr>
+
+        <tr>
+            <td><label>Mobile Number</label></td>
+            <td><input type="text" name="mobile" maxlength="10"></td>
+            <td><div  style="color:red" id="mobileErr"></div></td>
+        </tr>
+
+        <tr>
+            <td><label>Country</label></td>
+            <td><select name="country">
+            <option>Select</option>
+            <option>Australia</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+        </select></td>
+        <td><div style="color:red" id="countryErr"></div></td>
+        </tr>
+
+        <tr>
+            <td><label>Gender</label></td>
+            <td>
+            <div >
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+            </td>
+        <td><div style="color:red" id="genderErr"></div></td>
+        </tr>
+
+        <tr>
+            <td><label>Hobbies <i>(Optional)</i></label></td>
+            <td>
+                <div >
+            <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+            <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+            </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+<script src="ApplicationFormValidation.js"></script>
+</body>
+</html>

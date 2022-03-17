@@ -1,8 +1,22 @@
+
 .nav-right{
   float:right;
 }
 
 .offers-class{
   text-align: center;
+}
 
+/* .side-by-side {
+  display: flex;
+  flex-flow: row wrap;
+
+} */
+
+.glyphicon {
+  font-size: 50px;
+}
+
+.old-price{
+  text-decoration: line-through;
 }
