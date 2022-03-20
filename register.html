@@ -1,69 +1,192 @@
 <!DOCTYPE html>
 <html >
 <head>
-<title>Application Form</title>
+  <title>Application Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="register.js"></script>
 </head>
 <body>
-<form name="contactForm" onsubmit="return validateForm()" >
-    <h2>Application Form</h2>
-    <table >
-        <tr>
-        <td><label>Full Name</label></td>
-        <td><input type="text" name="name"></td>
-        <td><div style="color:red" id="nameErr"></div></td>
-        </tr>
+  <!-- Navbar start -->
+        <div class="container-fluid">
+          <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Beaute</a>
+          </div>
 
-        <tr>
-            <td><label>Email Address</label></td>
-            <td><input type="text" name="email"></td>
-            <td><div style="color:red" id="emailErr"></div></td>
-        </tr>
-
-        <tr>
-            <td><label>Mobile Number</label></td>
-            <td><input type="text" name="mobile" maxlength="10"></td>
-            <td><div  style="color:red" id="mobileErr"></div></td>
-        </tr>
-
-        <tr>
-            <td><label>Country</label></td>
-            <td><select name="country">
-            <option>Select</option>
-            <option>Australia</option>
-            <option>India</option>
-            <option>United States</option>
-            <option>United Kingdom</option>
-        </select></td>
-        <td><div style="color:red" id="countryErr"></div></td>
-        </tr>
-
-        <tr>
-            <td><label>Gender</label></td>
-            <td>
-            <div >
-            <label><input type="radio" name="gender" value="male"> Male</label>
-            <label><input type="radio" name="gender" value="female"> Female</label>
+            <div class="navbar-header dropdown">
+              <a class="navbar dropdown-toggle navbar-brand" data-toggle="dropdown" href="#">Categories</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Shampoo</a></li>
+                <li><a href="#">Face Cream</a></li>
+                <li><a href="#">Body Lotion</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Explore other categories</a></li>
+              </ul>
             </div>
-            </td>
-        <td><div style="color:red" id="genderErr"></div></td>
-        </tr>
 
-        <tr>
-            <td><label>Hobbies <i>(Optional)</i></label></td>
-            <td>
+            <div class="navbar-header dropdown">
+              <a class="navbar dropdown-toggle navbar-brand" data-toggle="dropdown"  role="button" id="navbarDropdownMenuLink" href="#">Brands</a>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="#">Pantene</a></li>
+                <li><a href="#">Loreal</a></li>
+                <li><a href="#">Nivea</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Explore other brands</a></li>
+              </ul>
+            </div>
+
+
+          <div class="navbar-header nav-right">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Cart</a></li>
+              <li><a href="#">Account</a></li>
+            </ul>
+          </div>
+        </div>
+<!-- navbar end -->
+
+  <div class="container" >
+    <form name="contactForm" onsubmit="return validateForm()" >
+        <h2>Register yourself to continue.</h2>
+        <table style="margin:0 auto;">
+            <tr>
+            <td><label class="form-label">Full Name</label></td>
+            <td><input class="form-control" type="text" name="name" required></td>
+            <td><div style="color:red" id="nameErr"></div></td>
+            </tr>
+
+            <tr>
+                <td><label>Email Address</label></td>
+                <td><input class="form-control" type="text" name="email" placeholder="example@email.com" required></td>
+                <td><div style="color:red" id="emailErr"></div></td>
+            </tr>
+            <tr>
+              <td><label>Password</label></td>
+              <td><input class="form-control" type="password" name="password" required></td>
+              <td><div style="color:red" id="passwordErr"></div></td>
+            </tr>
+
+            <tr>
+              <td><label>Confirm Password</label></td>
+              <td><input class="form-control" type="password" name="confPassword" required></td>
+              <td><div style="color:red" id="confPasswordErr"></div></td>
+            </tr>
+
+            <tr>
+                <td><label>Mobile Number</label></td>
+                <td><input class="form-control" type="text" name="mobile" maxlength="10" required></td>
+                <td><div  style="color:red" id="mobileErr"></div></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
                 <div >
-            <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
-            <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
-            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
-            </div>
-            </td>
-        </tr>
+                <label ><input type="radio" class="form-check-input" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="others"> Others</label>
+                </div>
+                </td>
+            <td><div style="color:red" id="genderErr"></div></td>
+            </tr>
 
-        <tr>
-            <td><input type="submit" value="Submit"></td>
-        </tr>
-    </table>
-</form>
-<script src="ApplicationFormValidation.js"></script>
+
+            <tr>
+                <td><label>Country</label></td>
+                <td>
+                  <select class="form-select" name="country">
+                      <option>Select</option>
+                      <option>Australia</option>
+                      <option>India</option>
+                      <option>United States</option>
+                      <option>United Kingdom</option>
+                  </select>
+              </td>
+            <td><div style="color:red" id="countryErr"></div></td>
+            </tr>
+
+            <tr>
+              <td><label>Address</label></td>
+              <td><textarea class="form-control" name="address" rows="4" cols="50" required></textarea></td>
+              <td><div style="color:red" id="addressErr"></div></td>
+            </tr>
+
+            <tr>
+              <td><label>Pincode</label></td>
+              <td><input class="form-control" type="text" name="pincode" maxlength="6" required></td>
+              <td><div style="color:red" id="pincodeErr"></div></td>
+            </tr>
+
+            <tr>
+              <td><label>District</label></td>
+              <td><input class="form-control" type="text" name="district" required></td>
+              <td><div style="color:red" id="districtErr"></div></td>
+            </tr>
+
+            <tr>
+                <td><label>State</label></td>
+                <td>
+                  <select class="form-select" name="state">
+                      <option>Select</option>
+                      <option>Andhra Pradesh</option>
+                      <option>Arunachal Pradesh</option>
+                      <option>Assam</option>
+                      <option>Bihar</option>
+                      <option>Chhatisgarh</option>
+                      <option>Goa</option>
+                      <option>Gujarat</option>
+                      <option>Haryana</option>
+                      <option>Himachal Pradesh</option>
+                      <option>Jharkhand</option>
+                      <option>Karnataka</option>
+                      <option>Kerala</option>
+                      <option>Madhya Pradesh</option>
+                      <option>Maharashtra</option>
+                      <option>Manipur</option>
+                      <option>Meghalaya</option>
+                      <option>Mizoram</option>
+                      <option>Nagaland</option>
+                      <option>Odisha</option>
+                      <option>Punjab</option>
+                      <option>Rajasthan</option>
+                      <option>Sikkim</option>
+                      <option>Tamil Nadu</option>
+                      <option>Telangana</option>
+                      <option>Tripura</option>
+                      <option>Uttar Pradesh</option>
+                      <option>Uttarakhand</option>
+                      <option>West Bengal</option>
+                  </select>
+              </td>
+            <td><div style="color:red" id="stateErr"></div></td>
+            </tr>
+
+
+            <!-- <tr>
+                <td><label>Hobbies <i>(Optional)</i></label></td>
+                <td>
+                    <div >
+                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+                </div>
+                </td>
+            </tr> -->
+
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+  </div>
+<script>validateForm();</script>
 </body>
 </html>

@@ -20,3 +20,11 @@
 .old-price{
   text-decoration: line-through;
 }
+
+td{
+  padding: 10px;
+}
+
+form > h2{
+  text-align: center;
+}
