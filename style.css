@@ -28,3 +28,17 @@ td{
 form > h2{
   text-align: center;
 }
+
+.cart-image{
+  float: left;
+}
+
+.item-details{
+  padding-left: 375px;
+}
+
+#total-cost{
+  float:right;
+  padding-right:200px;
+  margin-top: 0px;
+}
